@@ -30,7 +30,7 @@ function display(x){
             var r=Math.floor(Math.random()*8);
             document.getElementById("msg").innerHTML="Woah!!! You could be the true king of Westeros!!! Your Character is "+king[r];
         }
-    else if(x>=5 && x<7)
+    else if(x>=5 && x<8)
         {
             var r=Math.floor(Math.random()*8);
             document.getElementById("msg").innerHTML="You could be the Hand of the King!!! Your Character is "+hand[r];
