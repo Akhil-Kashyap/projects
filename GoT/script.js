@@ -76,10 +76,10 @@ function renderQuestion(){
     
     quiz.innerHTML = "<h4>"+question+"</h4>";
     
-    quiz.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
-    quiz.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br>";
-    quiz.innerHTML += "<input type='radio' name='choices' value='C'> "+chC+"<br>";
-    quiz.innerHTML += "<input type='radio' name='choices' value='D'> "+chD+"<br><br>";
+    quiz.innerHTML += "<input type='radio' name='choices' value='A'>  "+chA+"<br>";
+    quiz.innerHTML += "<input type='radio' name='choices' value='B'>  "+chB+"<br>";
+    quiz.innerHTML += "<input type='radio' name='choices' value='C'>  "+chC+"<br>";
+    quiz.innerHTML += "<input type='radio' name='choices' value='D'>  "+chD+"<br><br>";
     
     quiz.innerHTML += "<button onclick='checkAnswer()'>Submit </button>";
     
