@@ -1,0 +1,120 @@
+*{
+    margin-top: 0;
+    margin-left:0;
+    box-sizing: border-box;
+}
+
+h3{
+    text-align:center;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    line-height: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    
+}
+
+.quotes{
+    height:120px;
+    width:100%;
+    background-color:black;
+    
+    color: white;
+}
+
+body{
+    background: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.button 
+{  
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    float:right;
+    background-color: #fff;
+    margin: 0 2px 0 2px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button a 
+{
+    text-decoration: none;
+    color: #555;
+    line-height: 20px;
+}
+#quiz-container 
+{
+    width:50%;
+    margin:50px auto;
+    padding: 50px 30px;
+    
+    
+}
+
+
+ul 
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 500px;
+    font-family: 'Satisfy', cursive;
+}
+ul li
+{
+    background: #223394;
+    width: 200px;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block; 
+    
+}
+#Submit
+{
+    margin-top:20px;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    
+    background-color: #fff;
+    margin: 0 2px 0 2px;
+    cursor: pointer;
+}
+#start 
+{
+    display:none;
+    width: 100px;
+}
+input[type="radio"]{
+    cursor: pointer;
+}
+
+#quiz>h4{
+    font-family: 'Volkhov', serif;
+}
+
+
+#quiz_status{
+    font-size: 15px;
+    height: 30px;
+}
+
+#msg{
+    font-family: 'Volkhov', serif;
+    font-size: 30px;
+}
+
+#intro{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Bree Serif', serif;
+    padding-top: 20px;
+    font-weight: 300;
+}
