@@ -53,7 +53,8 @@ h1 {
 {
     width:50%;
     margin:50px auto;
-    padding: 50px 30px;
+    padding: 40px 30px;
+    margin-top: 20px;
     
     
 }
@@ -118,3 +119,18 @@ input[type="radio"]{
     padding-top: 20px;
     font-weight: 500;
 }
+
+
+/*#img{
+    height:125px;
+    width:185px;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0 2px 5px 0 rgba(224,224,224,0.19), 0 6px 20px 0 rgba(224,224,224,0.19);
+*/    
+   
+}
+
+
+

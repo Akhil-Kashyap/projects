@@ -19,21 +19,76 @@ var questions=[
     ["What is the go-to anaesthetic for maesters across Westeros called?","Shade of the Evening","Scourleaf","Having another wine","Milk of the poppy","D"]
 ];
 
-var king=["Jon Snow","Bran Stark","Robert Baratheon","Stannis Baratheon","Rob Stark","Cercie Lanister","Sansa Stark","Joffrey Baratheon"];
+var king=["Jon Snow","Bran Stark","Robert Baratheon","Stannis Baratheon","Rob Stark","Cercie Lanister","Sansa Stark","Daenerys Targaryen"];
 
-var hand=["Tywin Lannister","Tyrion Lannister","Ser Davos Seaworth","Ned Stark","Jon Arryn","Ser Barristan Selmy","Qyburn","Mace Tyrell"]
+var king_image= new Array();
+king_image[0] = new Image();
+king_image[0].src = 'king/jon.jpeg';
+king_image[1] = new Image();
+king_image[1].src = 'king/bran.jpeg';
+king_image[2] = new Image();
+king_image[2].src = 'king/robert.jpg';
+king_image[3] = new Image();
+king_image[3].src = 'king/stannis.jpeg';
+king_image[4] = new Image();
+king_image[4].src = 'king/rob.jpg';
+king_image[5] = new Image();
+king_image[5].src = 'king/cercie.jpg';
+king_image[6] = new Image();
+king_image[6].src = 'king/sansa.jpg';
+king_image[7] = new Image();
+king_image[7].src = 'king/dany.jpeg';
 
+
+
+
+var hand=["Tywin Lannister","Tyrion Lannister","Ser Davos Seaworth","Ned Stark","Petyr Baelish","Ser Jorah Mormont","Qyburn","Lyanna Mormont",""];
+var hand=["Tywin Lannister","Tyrion Lannister","Ser Davos Seaworth","Ned Stark","Petyr Baelish","Ser Jorah Mormont","Qyburn","Lyanna Mormont","Daario Naharis"];
+
+var hand_image= new Array();
+hand_image[0] = new Image();
+hand_image[0].src = 'hand/tywin.jpg';
+hand_image[1] = new Image();
+hand_image[1].src = 'hand/tyrion.jpg';
+hand_image[2] = new Image();
+hand_image[2].src = 'hand/davos.jpg';
+hand_image[3] = new Image();
+hand_image[3].src = 'hand/ned.jpeg';
+hand_image[4] = new Image();
+hand_image[4].src = 'hand/petyr.jpg';
+hand_image[5] = new Image();
+hand_image[5].src = 'hand/jorah.jpeg';
+hand_image[6] = new Image();
+hand_image[6].src = 'hand/qyburn.jpg';
+hand_image[7] = new Image();
+hand_image[7].src = 'hand/lyanna.jpg';
+hand_image[8] = new Image();
+hand_image[8].src = 'hand/daario.jpg';
 
 function display(x){
     if(x>=8)
         {
             var r=Math.floor(Math.random()*8);
             document.getElementById("msg").innerHTML="Woah!!! You could be the true king of Westeros!!! Your Character is "+king[r];
+            
+            var img = document.createElement("img");
+            img.src = king_image[r].src;
+            
+            img.setAttribute("style","height:125px;width:190px;border-radius: 8px;border-style: solid;border-width: 2px;box-shadow: 0 2px 5px 0 rgba(224,224,224,0.19), 0 6px 20px 0 rgba(224,224,224,0.19);");
+            var src = document.getElementById("image");
+            src.appendChild(img);
         }
     else if(x>=5 && x<8)
         {
-            var r=Math.floor(Math.random()*8);
+            var r=Math.floor(Math.random()*9);
             document.getElementById("msg").innerHTML="You could be the Hand of the King!!! Your Character is "+hand[r];
+            
+             var img = document.createElement("img");
+            img.src = hand_image[r].src;
+            
+            img.setAttribute("style","height:125px;width:190px;border-radius: 8px;border-style: solid;border-width: 2px;box-shadow: 0 2px 5px 0 rgba(224,224,224,0.19), 0 6px 20px 0 rgba(224,224,224,0.19);");
+            var src = document.getElementById("image");
+            src.appendChild(img);
         }
     else
         {
