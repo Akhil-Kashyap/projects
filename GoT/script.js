@@ -4,7 +4,7 @@ let q=["Winter is coming...","What do we say to the Lord of Death: Not today","T
 var pos = 0;
 var correct = 0;
 var quiz, quiz_status, question, choice, choices, chA, chB, chC, chD;
-
+var ans=[];
 
 var questions=[
     ["Who was responsible for the creation of Night King?","The Lord of Light","The Children of the Forest","The First Men","The Drowned God","B"],
@@ -131,12 +131,62 @@ function renderQuestion(){
     
     quiz.innerHTML = "<h4>"+question+"</h4>";
     
-    quiz.innerHTML += "<input type='radio' name='choices' value='A'>  "+chA+"<br>";
-    quiz.innerHTML += "<input type='radio' name='choices' value='B'>  "+chB+"<br>";
-    quiz.innerHTML += "<input type='radio' name='choices' value='C'>  "+chC+"<br>";
-    quiz.innerHTML += "<input type='radio' name='choices' value='D'>  "+chD+"<br><br>";
+    if(ans[pos]=='A')
+        {
+           quiz.innerHTML += "<input type='radio' name='choices' value='A' checked>  "+chA+"<br>"; 
+            quiz.innerHTML += "<input type='radio' name='choices' value='B'>  "+chB+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices'   value='C'>  "+chC+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='D'>  "+chD+"<br><br>";
+        }
+    else if(ans[pos]=='B')
+        {
+            quiz.innerHTML += "<input type='radio' name='choices' value='A'>  "+chA+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='B' checked>  "+chB+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='C'>  "+chC+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='D'>  "+chD+"<br><br>";
+        }
+    else if(ans[pos]=='C')
+        {
+            quiz.innerHTML += "<input type='radio' name='choices' value='A'>  "+chA+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='B'>  "+chB+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='C' checked>  "+chC+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='D'>  "+chD+"<br><br>";
+        }
+    else if(ans[pos]=='D')
+        {
+            quiz.innerHTML += "<input type='radio' name='choices' value='A'>  "+chA+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='B'>  "+chB+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='C'>  "+chC+"<br>";
+            quiz.innerHTML += "<input type='radio' name='choices' value='D' checked>  "+chD+"<br><br>";
+        }
     
-    quiz.innerHTML += "<button onclick='checkAnswer()'>Submit </button>";
+    
+   else
+   {
+        quiz.innerHTML += "<input type='radio' name='choices' value='A'>  "+chA+"<br>";
+        quiz.innerHTML += "<input type='radio' name='choices' value='B'>  "+chB+"<br>";
+        quiz.innerHTML += "<input type='radio' name='choices' value='C'>  "+chC+"<br>";
+        quiz.innerHTML += "<input type='radio' name='choices' value='D'>  "+chD+"<br><br>";
+   }
+        
+    
+    
+    if(pos==0){
+    quiz.innerHTML += "<button onclick='checkAnswer()'>Next </button>";
+    }
+    
+    else if(pos==9)
+    {
+         quiz.innerHTML += "<button onclick='back()'>Prev </button> ";
+          quiz.innerHTML += " <button onclick='checkAnswer()'>Submit </button>";  
+    }
+    
+    else{
+        quiz.innerHTML += "<button onclick='back()'>Prev </button> ";
+        quiz.innerHTML += " <button onclick='checkAnswer()'>Next </button>";
+        
+    }
+    
     
     quiz.setAttribute("style","font-size:20px;font-family: 'Volkhov', serif;font-weight: bold");
     
@@ -144,20 +194,34 @@ function renderQuestion(){
 
 
 function checkAnswer(){
-  
+  var flag=0;
   choices = document.getElementsByName("choices");
   for(var i=0; i<choices.length; i++){
     if(choices[i].checked){
       choice = choices[i].value;
+        ans[pos]=choice;
+        flag=1;
     }
   }
+    if(flag==0)
+        {
+            alert("Please select an option!!!");
+        }
+    else{
   
-  if(choice == questions[pos][5]){
+            if(choice == questions[pos][5]){
 
-    correct++;
-  }
+            correct++;
+        }
   
-  pos++;
+        pos++;
   
-  renderQuestion();
+        renderQuestion();
+    }
+}
+
+function back(){
+    correct--;
+    pos--;
+    renderQuestion();
 }
