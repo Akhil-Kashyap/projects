@@ -230,10 +230,19 @@ function back(){
 }
 
 function score(){
-    for(var i=0;i<9;i++)
+    for(var i=0; i<choices.length; i++){
+    if(choices[i].checked)
+        {
+            choice = choices[i].value;
+            ans[pos]=choice;
+        }
+    }
+    
+    for(var i=0;i<10;i++)
         {
             if(ans[i]==questions[i][5])
                 correct++;
+            console.log(ans[i]);
         }
     pos++;
     renderQuestion();
