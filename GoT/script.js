@@ -242,7 +242,7 @@ function score(){
         {
             if(ans[i]==questions[i][5])
                 correct++;
-            console.log(ans[i]);
+            
         }
     pos++;
     renderQuestion();
