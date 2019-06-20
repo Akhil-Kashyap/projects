@@ -178,7 +178,7 @@ function renderQuestion(){
     else if(pos==9)
     {
          quiz.innerHTML += "<button onclick='back()'>Prev </button> ";
-          quiz.innerHTML += " <button onclick='checkAnswer()'>Submit </button>";  
+          quiz.innerHTML += " <button onclick='score()'>Submit </button>";  
     }
     
     else{
@@ -209,19 +209,32 @@ function checkAnswer(){
         }
     else{
   
-            if(choice == questions[pos][5]){
-
-            correct++;
+            pos++;
+            renderQuestion();
         }
   
-        pos++;
-  
-        renderQuestion();
-    }
 }
 
+
 function back(){
-    correct--;
+    for(var i=0; i<choices.length; i++){
+    if(choices[i].checked)
+        {
+            choice = choices[i].value;
+            ans[pos]=choice;
+        }
+    }
+    
     pos--;
+    renderQuestion();
+}
+
+function score(){
+    for(var i=0;i<9;i++)
+        {
+            if(ans[i]==questions[i][5])
+                correct++;
+        }
+    pos++;
     renderQuestion();
 }
