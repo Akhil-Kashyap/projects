@@ -19,7 +19,7 @@ var questions=[
     ["What is the go-to anaesthetic for maesters across Westeros called?","Shade of the Evening","Scourleaf","Having another wine","Milk of the poppy","D"]
 ];
 
-var king=["Jon Snow","Bran Stark","Robert Baratheon","Stannis Baratheon","Rob Stark","Cercie Lanister","Sansa Stark","Daenerys Targaryen"];
+var king=["Jon Snow","Bran Stark","Robert Baratheon","Stannis Baratheon","Rob Stark","Cersie Lanister","Sansa Stark","Daenerys Targaryen"];
 
 var king_image= new Array();
 king_image[0] = new Image();
@@ -33,17 +33,15 @@ king_image[3].src = 'king/stannis.jpeg';
 king_image[4] = new Image();
 king_image[4].src = 'king/rob.jpg';
 king_image[5] = new Image();
-king_image[5].src = 'king/cercie.jpg';
+king_image[5].src = 'king/cersie.jpg';
 king_image[6] = new Image();
 king_image[6].src = 'king/sansa.jpg';
 king_image[7] = new Image();
 king_image[7].src = 'king/dany.jpeg';
 
 
-
-
-var hand=["Tywin Lannister","Tyrion Lannister","Ser Davos Seaworth","Ned Stark","Petyr Baelish","Ser Jorah Mormont","Qyburn","Lyanna Mormont",""];
 var hand=["Tywin Lannister","Tyrion Lannister","Ser Davos Seaworth","Ned Stark","Petyr Baelish","Ser Jorah Mormont","Qyburn","Lyanna Mormont","Daario Naharis"];
+
 
 var hand_image= new Array();
 hand_image[0] = new Image();
