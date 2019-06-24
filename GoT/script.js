@@ -6,6 +6,7 @@ var correct = 0;
 var quiz, quiz_status, question, choice, choices, chA, chB, chC, chD;
 var ans=[];
 
+
 var questions=[
     ["Who was responsible for the creation of Night King?","The Lord of Light","The Children of the Forest","The First Men","The Drowned God","B"],
     ["What is the Iron Bank's representative, played by Mark Gatiss, called?","Quorin Halfhand","Xaro Xhoan Daxon","Howard from the Halifax","Tycho Nestoris","D"],
